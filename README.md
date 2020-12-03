@@ -4,9 +4,9 @@ Apigee can require clients to use TLS authentication, and when that happens,
 if the `VirtualHost` is configured with the `PropagateTLSInformation` element,
 the apiproxy itself can receive the certificate that was presented by the client.
 
-But the proxy receives it in raw form.
+But the proxy receives it in raw (encoded) form.
 
-This repo contains the Java source code for a java callout that parses the certificate and extracts information from it including:
+This repo contains the Java source code for a java callout that parses the encoded certificate and extracts information from it including:
 
 * the serial number in base16
 * the issuer DN string
